@@ -89,7 +89,7 @@ const PostJob = () => {
   return (
     <div>
       <h1 className="text-green-700 gradient-title font-extrabold text-5xl sm:text-7xl text-center pb-8">
-        Post a Job
+        Post a Volunteering Opertunity
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}

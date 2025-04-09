@@ -75,7 +75,7 @@ const JobListing = () => {
   return (
     <div className="">
       <h1 className="text-green-700 gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
-        Latest Jobs
+        Latest Opertunities
       </h1>
       <form
         onSubmit={handleSearch}
