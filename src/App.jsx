@@ -11,6 +11,7 @@ import JobListing from "./pages/jobListing";
 import MyJobs from "./pages/my-jobs";
 import SavedJobs from "./pages/saved-jobs";
 import JobPage from "./pages/job";
+import UserProfile from "./pages/user-profile"; // Import the user profile page
 
 import "./App.css";
 
@@ -70,13 +71,21 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      {
+        path: "/user-profile",
+        element: (
+          <ProtectedRoute>
+            <UserProfile />
+          </ProtectedRoute>
+        ),
+      },
     ],
   },
 ]);
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
     </ThemeProvider>
   );

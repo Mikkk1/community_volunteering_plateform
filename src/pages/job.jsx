@@ -53,7 +53,7 @@ const JobPage = () => {
   return (
     <div className="flex flex-col gap-8 mt-5">
       <div className="flex flex-col-reverse gap-6 md:flex-row justify-between items-center">
-        <h1 className="gradient-title font-extrabold pb-3 text-4xl sm:text-6xl">
+        <h1 className="text-green-700 gradient-title font-extrabold pb-3 text-4xl sm:text-6xl">
           {job?.title}
         </h1>
         <img src={job?.company?.logo_url} className="h-12" alt={job?.title} />
@@ -97,15 +97,15 @@ const JobPage = () => {
         </Select>
       )}
 
-      <h2 className="text-2xl sm:text-3xl font-bold">About the job</h2>
-      <p className="sm:text-lg">{job?.description}</p>
+      <h2 className="text-green-700 text-2xl sm:text-3xl font-bold">About the job</h2>
+      <p className="text-green-900 sm:text-lg">{job?.description}</p>
 
-      <h2 className="text-2xl sm:text-3xl font-bold">
+      <h2 className="text-green-700 text-2xl sm:text-3xl font-bold">
         What we are looking for
       </h2>
       <MDEditor.Markdown
         source={job?.requirements}
-        className="bg-transparent sm:text-lg" // add global ul styles - tutorial
+        className="text-green-900 bg-transparent sm:text-lg" // add global ul styles - tutorial
       />
       {job?.recruiter_id !== user?.id && (
         <ApplyJobDrawer

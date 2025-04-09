@@ -19,35 +19,30 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20">
-      <section className="text-center ">
+      <section className="text-green-700 text-center ">
         <h1 className="flex flex-col items-center justify-center gradient-title font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter py-4">
-          Find Your Dream Job
+          Make A Difference In
           <span className="flex items-center gap-2 sm:gap-6">
-            and get
-            <img
-              src="/logo.png"
-              className="h-14 sm:h-24 lg:h-32"
-              alt="Hirrd Logo"
-            />
+            Your Community!
           </span>
         </h1>
-        <p className="text-gray-300 sm:mt-4 text-xs sm:text-xl">
-          Explore thousands of job listings or find the perfect candidate
+        <p className="text-green-900 sm:mt-4 text-xs sm:text-xl">
+          Explore Oppertunities to volunteer or find the willing candidates with ease!
         </p>
       </section>
       <div className="flex gap-6 justify-center">
         <Link to={"/jobs"}>
-          <Button variant="blue" size="xl">
-            Find Jobs
+          <Button variant="outline" size="xl">
+            Find Oppertunities
           </Button>
         </Link>
         <Link to={"/post-job"}>
-          <Button variant="destructive" size="xl">
-            Post a Job
+          <Button variant="outline" size="xl">
+          Post Oppertunities
           </Button>
         </Link>
       </div>
-      <Carousel
+      {/* <Carousel
         plugins={[
           Autoplay({
             delay: 2000,
@@ -58,33 +53,30 @@ const LandingPage = () => {
         <CarouselContent className="flex gap-5 sm:gap-20 items-center">
           {companies.map(({ name, id, path }) => (
             <CarouselItem key={id} className="basis-1/3 lg:basis-1/6 ">
-              <img
-                src={path}
-                alt={name}
-                className="h-9 sm:h-14 object-contain"
-              />
+              
             </CarouselItem>
+            
           ))}
         </CarouselContent>
-      </Carousel>
+      </Carousel> */}
 
-      <img src="/banner.jpeg" className="w-full" />
+      {/* <img src="/banner.jpeg" className="w-full" /> */}
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
           <CardHeader>
-            <CardTitle className="font-bold">For Job Seekers</CardTitle>
+            <CardTitle className="text-green-700 font-bold">For Volunteers</CardTitle>
           </CardHeader>
-          <CardContent>
-            Search and apply for jobs, track applications, and more.
+          <CardContent className="text-green-900">
+            Search and apply for volunteering, track applications, and more.
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="font-bold">For Employers</CardTitle>
+            <CardTitle className="text-green-700 font-bold">For Non-Profits</CardTitle>
           </CardHeader>
-          <CardContent>
-            Post jobs, manage applications, and find the best candidates.
+          <CardContent className="text-green-900">
+            Post opertunitties, manage applications, and find the right volunteers.
           </CardContent>
         </Card>
       </section>

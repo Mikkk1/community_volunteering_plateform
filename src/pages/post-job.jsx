@@ -88,7 +88,7 @@ const PostJob = () => {
 
   return (
     <div>
-      <h1 className="gradient-title font-extrabold text-5xl sm:text-7xl text-center pb-8">
+      <h1 className="text-green-700 gradient-title font-extrabold text-5xl sm:text-7xl text-center pb-8">
         Post a Job
       </h1>
       <form
@@ -114,7 +114,7 @@ const PostJob = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    {State.getStatesOfCountry("IN").map(({ name }) => (
+                    {State.getStatesOfCountry("GB").map(({ name }) => (
                       <SelectItem key={name} value={name}>
                         {name}
                       </SelectItem>
@@ -175,7 +175,7 @@ const PostJob = () => {
           <p className="text-red-500">{errorCreateJob?.message}</p>
         )}
         {loadingCreateJob && <BarLoader width={"100%"} color="#36d7b7" />}
-        <Button type="submit" variant="blue" size="lg" className="mt-2">
+        <Button type="submit" variant="secondary" size="lg" className="mt-2">
           Submit
         </Button>
       </form>

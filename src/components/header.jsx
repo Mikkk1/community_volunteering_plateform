@@ -8,6 +8,7 @@ import {
   useUser,
 } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
+import { UserPen, BellDot } from 'lucide-react';
 import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
 
 const Header = () => {
@@ -43,10 +44,18 @@ const Header = () => {
             </Button>
           </SignedOut>
           <SignedIn>
+          <Button variant="secondary" size="icon">
+              <BellDot />
+            </Button>
+          <Link to="/user-profile">
+            <Button variant="secondary" size="icon">
+              <UserPen />
+            </Button>
+              </Link>
             {user?.unsafeMetadata?.role === "recruiter" && (
               <Link to="/post-job">
-                <Button variant="destructive" className="rounded-full">
-                  <PenBox size={20} className="mr-2" />
+                <Button variant="secondary" className="rounded-full">
+                  <PenBox size={20} className="mr-1 " />
                   Post a Job
                 </Button>
               </Link>

@@ -74,7 +74,7 @@ const JobListing = () => {
 
   return (
     <div className="">
-      <h1 className="gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
+      <h1 className="text-green-700 gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
         Latest Jobs
       </h1>
       <form
@@ -87,7 +87,7 @@ const JobListing = () => {
           name="search-query"
           className="h-full flex-1  px-4 text-md"
         />
-        <Button type="submit" className="h-full sm:w-28" variant="blue">
+        <Button type="submit" className="h-full sm:w-28" variant="outline">
           Search
         </Button>
       </form>
@@ -99,7 +99,7 @@ const JobListing = () => {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              {State.getStatesOfCountry("IN").map(({ name }) => {
+              {State.getStatesOfCountry("GB").map(({ name }) => {
                 return (
                   <SelectItem key={name} value={name}>
                     {name}
@@ -131,7 +131,7 @@ const JobListing = () => {
         </Select>
         <Button
           className="sm:w-1/2"
-          variant="destructive"
+          variant="secondary"
           onClick={clearFilters}
         >
           Clear Filters
