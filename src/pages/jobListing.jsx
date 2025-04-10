@@ -83,7 +83,7 @@ const JobListing = () => {
       >
         <Input
           type="text"
-          placeholder="Search Jobs by Title.."
+          placeholder="Search Opertunities by Title.."
           name="search-query"
           className="h-full flex-1  px-4 text-md"
         />
@@ -115,7 +115,7 @@ const JobListing = () => {
           onValueChange={(value) => setCompany_id(value)}
         >
           <SelectTrigger>
-            <SelectValue placeholder="Filter by Company" />
+            <SelectValue placeholder="Filter by Organisation" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>

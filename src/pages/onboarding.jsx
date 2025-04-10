@@ -45,14 +45,14 @@ const Onboarding = () => {
           className="h-36 text-2xl"
           onClick={() => handleRoleSelection("candidate")}
         >
-          Candidate
+          Volunteer
         </Button>
         <Button
           variant="destructive"
           className="h-36 text-2xl"
           onClick={() => handleRoleSelection("recruiter")}
         >
-          Recruiter
+          Non-Profit
         </Button>
       </div>
     </div>
